@@ -1,0 +1,23 @@
+<ActionBar title="Native Script Email Sent"></ActionBar>
+
+<!-- <StackLayout>
+    <Button (tap)="sendEmail()" text="Send Email"></Button>
+</StackLayout> -->
+
+<ScrollView>
+    <StackLayout>
+        <GridLayout rows="*, *, *, *, *" columns="80, *" class="form">
+            <Label row="0" col="0" text="To:" horizontalAlignment="right" class="label"></Label>
+            <TextField row="0" col="1" [(ngModel)]="toModel" hint="To" class="input input-border" keyboardType="email" ></TextField>
+            <Label row="1" col="0" text="CC:" horizontalAlignment="right" class="label"></Label>
+            <TextField row="1" col="1" [(ngModel)]="ccModel" hint="CC Email" class="input input-border" keyboardType="email"></TextField>
+            <!-- <Label row="2" col="0" text="BCC:" horizontalAlignment="right" class="label"></Label>
+            <TextField row="2" col="1" text="{{ bccEmail }}" hint="bcc email address(es)" class="input input-border" keyboardType="email"></TextField> -->
+            <Label row="3" col="0" text="Subject:" horizontalAlignment="right" class="label"></Label>
+            <TextField row="3" col="1" [(ngModel)]="subjectModel" hint="Email Subject" class="input input-border"></TextField>
+            <Label row="4" col="0" text="Message:" horizontalAlignment="right" class="label"></Label>
+            <TextField row="4" col="1" [(ngModel)]="bodyModel" hint="Email Message" class="input input-border"></TextField>
+        </GridLayout>
+        <Button (tap)="sendEmail()" text="Send Email"></Button>
+    </StackLayout>
+</ScrollView>
